@@ -55,6 +55,10 @@ flutter:
   assets:
   - assets/images/logo.png
   - assets/images/splash_image.png
+  - assets/images/city1.png
+  - assets/images/city2.png
+  - assets/images/city3.png
+  - assets/images/icon_star.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

@@ -1,3 +1,4 @@
+import 'package:cozy_apps/pages/home_page.dart';
 import 'package:cozy_apps/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -11,8 +12,9 @@ class SplashPage extends StatelessWidget {
         bottom: false,
         child: Stack(
           children: [
-            Align(alignment: Alignment.bottomCenter, 
-            child: Image.asset('assets/images/splash_image.png')),
+            Align(
+                alignment: Alignment.bottomCenter,
+                child: Image.asset('assets/images/splash_image.png')),
             Padding(
               padding: const EdgeInsets.only(
                 top: 50,
@@ -55,8 +57,17 @@ class SplashPage extends StatelessWidget {
                     width: 210,
                     height: 58,
                     child: ElevatedButton(
-                      style: ButtonStyle(backgroundColor: MaterialStateProperty.all(purpleColor)), 
-                      onPressed: () {},
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(purpleColor)),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomePage(),
+                                ),
+                                );
+                      },
                       // shape: RoundedRectangleBorder(
                       //   borderRadius: BorderRadius.circular(17),
                       // ),
@@ -65,8 +76,8 @@ class SplashPage extends StatelessWidget {
                         style: whiteTextStyle.copyWith(
                           fontSize: 18,
                         ),
-                        ),
                       ),
+                    ),
                   ),
                 ],
               ),
