@@ -1,6 +1,7 @@
 import "package:cozy_apps/models/city.dart";
 import "package:cozy_apps/theme.dart";
 import "package:cozy_apps/widgets/city_card.dart";
+import "package:cozy_apps/widgets/space_card.dart";
 import "package:flutter/material.dart";
 
 class HomePage extends StatelessWidget {
@@ -16,6 +17,7 @@ class HomePage extends StatelessWidget {
           ),
           child: ListView(
             children: [
+              // NOTE : TITLE/HEADER
               Padding(
                 padding: EdgeInsets.only(left: edge),
                 child: Text(
@@ -40,6 +42,7 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
+              // NOTE : POPULAR CITIES
               Padding(
                 padding: EdgeInsets.only(left: edge),
                 child: Text(
@@ -93,6 +96,27 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              // NOTE : RECOMMENDED SPACE
+              Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Recommended Space',
+                  style: regularTextStyle.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Column(
+                children: [
+                  SpaceCard()
+                ],
               )
             ],
           ),
