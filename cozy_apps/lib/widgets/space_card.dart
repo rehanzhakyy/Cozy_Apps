@@ -22,11 +22,11 @@ class SpaceCard extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: Container(
                     height: 30,
-                    width: 50,
+                    width: 70,
                     decoration: BoxDecoration(
                         color: purpleColor,
                         borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(30),
+                          bottomLeft: Radius.circular(36),
                         )),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -51,6 +51,47 @@ class SpaceCard extends StatelessWidget {
               ],
             ),
                     ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Kuretakeso Hott',
+                style: blackTextStyle.copyWith(
+                  fontSize: 18,
+                ),
+              ),
+              const SizedBox(
+                height: 2,
+              ),
+              Text.rich(
+                TextSpan(
+                  text: '\$52',
+                  style: purpleTextStyle.copyWith(
+                    fontSize: 16,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: '/ month',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      )
+                    )
+                  ]
+                ),
+
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Text(
+                'Bandung, Germany',
+              style: greyTextStyle
+              ),
+            ],
           )
       ],
     );
