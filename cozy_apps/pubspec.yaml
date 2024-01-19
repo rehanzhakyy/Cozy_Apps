@@ -60,6 +60,8 @@ flutter:
   - assets/images/city3.png
   - assets/images/icon_star.png
   - assets/images/space1.png
+  - assets/images/spaces2.png
+  - assets/images/spaces3.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

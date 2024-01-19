@@ -1,4 +1,5 @@
 import "package:cozy_apps/models/city.dart";
+import "package:cozy_apps/models/space.dart";
 import "package:cozy_apps/theme.dart";
 import "package:cozy_apps/widgets/city_card.dart";
 import "package:cozy_apps/widgets/space_card.dart";
@@ -114,18 +115,53 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              const Column(
-                children: [
-                  SpaceCard(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SpaceCard(),
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: edge,
+                ),
+                child: Column(
+                  children: [
+                    SpaceCard(
+                      Space(
+                        id: 1,
+                        name: 'Kuretakeso Hott',
+                        imageUrl: 'assets/images/spaces1.png',
+                        price: 52,
+                        city: 'Bandung',
+                        country: 'Germany',
+                        rating: 4,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                        id: 2,
+                        name: 'Roemah Nenek',
+                        imageUrl: 'assets/images/spaces2.png',
+                        price: 11,
+                        city: 'Seattle',
+                        country: 'Bogor',
+                        rating: 5,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                        id: 3,
+                        name: 'Darrling How',
+                        imageUrl: 'assets/images/spaces3.png',
+                        price: 20,
+                        city: 'Jakarta',
+                        country: 'Indonesia',
+                        rating: 3,
+                      ),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
