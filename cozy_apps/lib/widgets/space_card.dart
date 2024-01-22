@@ -55,7 +55,7 @@ class SpaceCard extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 20,
+          width: 20,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,

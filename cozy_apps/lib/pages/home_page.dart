@@ -3,6 +3,7 @@ import "package:cozy_apps/models/space.dart";
 import "package:cozy_apps/theme.dart";
 import "package:cozy_apps/widgets/city_card.dart";
 import "package:cozy_apps/widgets/space_card.dart";
+import "package:cozy_apps/widgets/tips_card.dart";
 import "package:flutter/material.dart";
 
 class HomePage extends StatelessWidget {
@@ -67,10 +68,9 @@ class HomePage extends StatelessWidget {
                     ),
                     CityCard(
                       City(
-                        id: 1,
-                        name: 'Jakarta',
-                        imageUrl: 'assets/images/city1.png'
-                      ),
+                          id: 1,
+                          name: 'Jakarta',
+                          imageUrl: 'assets/images/city1.png'),
                     ),
                     const SizedBox(
                       width: 20,
@@ -88,10 +88,9 @@ class HomePage extends StatelessWidget {
                     ),
                     CityCard(
                       City(
-                        id: 3,
-                        name: 'Surabaya',
-                        imageUrl: 'assets/images/city3.png'
-                      ),
+                          id: 3,
+                          name: 'Surabaya',
+                          imageUrl: 'assets/images/city3.png'),
                     ),
                     const SizedBox(
                       width: 24,
@@ -125,7 +124,7 @@ class HomePage extends StatelessWidget {
                       Space(
                         id: 1,
                         name: 'Kuretakeso Hott',
-                        imageUrl: 'assets/images/spaces1.png',
+                        imageUrl: 'assets/images/space1.png',
                         price: 52,
                         city: 'Bandung',
                         country: 'Germany',
@@ -139,7 +138,7 @@ class HomePage extends StatelessWidget {
                       Space(
                         id: 2,
                         name: 'Roemah Nenek',
-                        imageUrl: 'assets/images/spaces2.png',
+                        imageUrl: 'assets/images/space2.png',
                         price: 11,
                         city: 'Seattle',
                         country: 'Bogor',
@@ -153,7 +152,7 @@ class HomePage extends StatelessWidget {
                       Space(
                         id: 3,
                         name: 'Darrling How',
-                        imageUrl: 'assets/images/spaces3.png',
+                        imageUrl: 'assets/images/space3.png',
                         price: 20,
                         city: 'Jakarta',
                         country: 'Indonesia',
@@ -162,7 +161,37 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              // NOTE: TIPS & GUIDANCE
+              Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Tips and Guidance',
+                  style: regularTextStyle.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: edge,
+                ),
+                child: Column(
+                  children: [
+                    TipsCard(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    TipsCard()
+                  ],
+                ),
+              ),
             ],
           ),
         ),
